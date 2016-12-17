@@ -1,0 +1,26 @@
+{
+    "name": "shibby/boilerplate",
+    "description": "My boilerplate for Laravel projects. Yes, i ALMOST use these packages on every project.",
+    "type": "library",
+    "minimum-stability": "dev",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Guven Atbakan",
+            "email": "guven@atbakan.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "kris/laravel-form-builder": "^1.7",
+        "laravelcollective/html": "5.3.*",
+        "doctrine/dbal": "^2.5",
+        "sofa/revisionable": "5.2.*",
+        "rap2hpoutre/laravel-log-viewer": "^0.6.0",
+        "jenssegers/agent": "^2.3"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.2",
+        "barryvdh/laravel-debugbar": "^2.2"
+    }
+}
