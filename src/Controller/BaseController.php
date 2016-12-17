@@ -33,7 +33,7 @@ class BaseController extends Controller
         $message->setType($type)
             ->setText($text);
 
-        \Session::flash('message', $message);
+        \Session::flash('flashMessage', $message);
     }
 
     protected function setMessage(string $type, string $text)
@@ -42,11 +42,15 @@ class BaseController extends Controller
         $message->setType($type)
             ->setText($text);
 
-        $this->data['message'][] = $message;
+        $this->data['flashMessage'][] = $message;
     }
 
     protected function view($view, $params = [])
     {
+        $message = \Session::get('flashMessage');
+        if (!empty($message[0])) {
+            $this->parameters['flashMessage'][] = $message[0];
+        }
         return view($view, $params, $this->parameters);
     }
 }
