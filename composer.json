@@ -1,5 +1,5 @@
 {
-    "name": "shibby/boilerplate",
+    "name": "shibby/loilerplate",
     "description": "My boilerplate for Laravel projects. Yes, i ALMOST use these packages on every project.",
     "type": "library",
     "minimum-stability": "dev",
