@@ -66,13 +66,18 @@ class BaseController extends Controller
         $this->parameters['flashMessages'][] = $message;
     }
 
-    protected function view($view, $params = [])
+    protected function initializeViewParameters()
     {
         $message = \Session::get('flashMessages');
 
         if ($message) {
             $this->parameters['flashMessages'][] = $message;
         }
+    }
+
+    protected function view($view, $params = [])
+    {
+        $this->initializeViewParameters();
 
         return view($view, $params, $this->parameters);
     }
