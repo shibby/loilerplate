@@ -20,11 +20,32 @@ class BaseController extends Controller
      */
     protected $parameters = [
         'siteTitle' => '',
+        'siteDescription' => '',
         'pageTitle' => '',
     ];
 
-    public function __construct()
+    protected function setTitle($title)
     {
+        $this->setSiteTitle($title);
+        $this->setPageTitle($title);
+    }
+
+    protected function setSiteTitle($title)
+    {
+        $this->parameters['siteTitle'] = $title.' | '.$this->parameters['siteTitle'];
+    }
+
+    protected function setPageTitle($title, $append = false)
+    {
+        if ($append === true) {
+            $title .= ' - '.@$this->parameters['pageTitle'];
+        }
+        $this->parameters['pageTitle'] = $title;
+    }
+
+    protected function setSiteDescription($description)
+    {
+        $this->parameters['siteDescription'] = $description;
     }
 
     protected function setFlashMessage(string $type, string $text)
@@ -33,7 +54,7 @@ class BaseController extends Controller
         $message->setType($type)
             ->setText($text);
 
-        \Session::flash('flashMessage', $message);
+        \Session::flash('flashMessages', $message);
     }
 
     protected function setMessage(string $type, string $text)
@@ -42,15 +63,17 @@ class BaseController extends Controller
         $message->setType($type)
             ->setText($text);
 
-        $this->data['flashMessage'][] = $message;
+        $this->parameters['flashMessages'][] = $message;
     }
 
     protected function view($view, $params = [])
     {
-        $message = \Session::get('flashMessage');
-        if (!empty($message[0])) {
-            $this->parameters['flashMessage'][] = $message[0];
+        $message = \Session::get('flashMessages');
+
+        if ($message) {
+            $this->parameters['flashMessages'][] = $message;
         }
+
         return view($view, $params, $this->parameters);
     }
 }
