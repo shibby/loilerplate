@@ -35,6 +35,24 @@ class FlashMessage
         return $this->type;
     }
 
+    public function getClass()
+    {
+        if ($this->type === 'error') {
+            return 'danger';
+        }
+
+        return $this->type;
+    }
+
+    public function getIcon()
+    {
+        if ($this->type === 'error') {
+            return '<strong><span class="fa fa-cross"></span></strong>';
+        } elseif ($this->type === 'success') {
+            return '<strong><span class="fa fa-check"></span></strong>';
+        }
+    }
+
     /**
      * @param string $type
      *
