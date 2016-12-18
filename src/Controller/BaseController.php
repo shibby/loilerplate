@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
 use Shibby\Loilerplate\Helper\FlashMessage;
+use Yajra\Datatables\Services\DataTable;
 
 /**
  * @author Guven Atbakan <guven@atbakan.com>
@@ -75,7 +76,14 @@ class BaseController extends Controller
         }
     }
 
-    protected function view($view, $params = [])
+    protected function renderDatatable(DataTable $datatable, string $view, $parameters = [])
+    {
+        $this->initializeViewParameters();
+
+        return $datatable->render($view, $parameters, $this->parameters);
+    }
+
+    protected function renderView($view, $params = [])
     {
         $this->initializeViewParameters();
 
