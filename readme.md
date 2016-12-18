@@ -1,4 +1,16 @@
+*Since it's not a stable package, first of all you should avoid of using this. *
+
+
 ## Installation
+
+
+Set minimum stability and prefer-stable options on your `composer.json` file.
+
+```json
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+```
+
 
 Install package and dev-dependencies via composer
 
