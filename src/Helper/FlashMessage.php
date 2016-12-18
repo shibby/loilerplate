@@ -35,7 +35,7 @@ class FlashMessage
         return $this->type;
     }
 
-    public function getClass()
+    public function getCssClass()
     {
         if ($this->type === 'error') {
             return 'danger';
