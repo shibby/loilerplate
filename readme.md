@@ -1,4 +1,22 @@
+![StyleCi](https://styleci.io/repos/76726509/shield?style=plastic)
+
 *Since it's not a stable package, first of all you should avoid of using this. *
+
+## What?
+
+It's a Boilerplate for [Laravel](http://github.com/laravel/laravel) framework.
+
+It contains and registers these packages by default:
+
+* [kris/laravel-form-builder](https://github.com/kristijanhusak/laravel-form-builder)
+* [laravelcollective/html](https://github.com/LaravelCollective/html)
+* [doctrine/dbal](https://github.com/doctrine/dbal)
+* [sofa/revisionable](https://github.com/jarektkaczyk/revisionable)
+* [rap2hpoutre/laravel-log-viewer](https://github.com/rap2hpoutre/laravel-log-viewer)
+* [jenssegers/agent](https://github.com/jenssegers/agent)
+
+* [barryvdh/laravel-ide-helper --dev](https://github.com/barryvdh/laravel-ide-helper)
+* [barryvdh/laravel-debugbar --dev](https://github.com/barryvdh/laravel-debugbar)
 
 
 ## Installation
