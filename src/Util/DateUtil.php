@@ -15,10 +15,24 @@ class DateUil
             $format = 'd/m/Y';
         }
         if (is_string($date)) {
-            $date = new \DateTime($date);  
+            $date = new \DateTime($date);
         }
         if ($date instanceof \DateTime) {
             return $date->format($format);
         }
+    }
+
+
+    public static function stringToDatetime($date, $format)
+    {
+        if (!$date) {
+            return;
+        }
+        $datetime = \Datetime::createFromFormat($format, $date);
+        if ($datetime->format($format) === $date) {
+            return $datetime;
+        }
+
+        return;
     }
 }
