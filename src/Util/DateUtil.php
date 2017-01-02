@@ -22,7 +22,6 @@ class DateUil
         }
     }
 
-
     public static function stringToDatetime($date, $format)
     {
         if (!$date) {
