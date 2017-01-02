@@ -15,7 +15,7 @@ class DateUil
             $format = 'd/m/Y';
         }
         if (is_string($date)) {
-            $date = new \DateTime($date);  
+            $date = new \DateTime($date);
         }
         if ($date instanceof \DateTime) {
             return $date->format($format);
