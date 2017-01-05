@@ -5,7 +5,7 @@ namespace Shibby\Loilerplate\Util;
 /**
  * @author Guven Atbakan <guven@atbakan.com>
  */
-class DateUil
+class DateUtil
 {
     public static function formatDate($date, $format = 'date')
     {
