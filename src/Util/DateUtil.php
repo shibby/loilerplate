@@ -27,7 +27,7 @@ class DateUtil
         if (!$date) {
             return;
         }
-        if($date instanceof \DateTime){
+        if ($date instanceof \DateTime) {
             return $date;
         }
         $datetime = \Datetime::createFromFormat($format, $date);
