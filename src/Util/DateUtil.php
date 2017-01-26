@@ -31,7 +31,7 @@ class DateUtil
             return $date;
         }
         $datetime = \Datetime::createFromFormat($format, $date);
-        if ($datetime->format($format) === $date) {
+        if ($datetime instanceof \DateTimeInterface && $datetime->format($format) === $date) {
             return $datetime;
         }
 
