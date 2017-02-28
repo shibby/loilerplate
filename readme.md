@@ -1,6 +1,6 @@
 ![StyleCi](https://styleci.io/repos/76726509/shield?style=plastic)
 
-*Since it's not a stable package, first of all you should avoid of using this. *
+_Since it's not a stable package, first of all you should avoid of using this._
 
 ## What?
 
