@@ -21,18 +21,10 @@ It contains and registers these packages by default:
 
 ## Installation
 
-
-Set minimum stability and prefer-stable options on your `composer.json` file.
-
-```json
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-```
-
-
 Install package and dev-dependencies via composer
 
-```
+``` bash
+
 composer require barryvdh/laravel-ide-helper barryvdh/laravel-debugbar rap2hpoutre/laravel-log-viewer --dev
 
 composer require shibby/loilerplate
@@ -40,7 +32,7 @@ composer require shibby/loilerplate
 ```
 
 Add service provider to config/app.php
- 
+
  ``` php
  'providers' => [
     // ...
@@ -61,6 +53,6 @@ Also add Facades to config/app.php
 
 Publish vendors
 
-```
+``` bash
 php artisan vendor:publish
 ```
