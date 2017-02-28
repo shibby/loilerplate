@@ -12,9 +12,9 @@ It contains and registers these packages by default:
 * [laravelcollective/html](https://github.com/LaravelCollective/html)
 * [doctrine/dbal](https://github.com/doctrine/dbal)
 * [sofa/revisionable](https://github.com/jarektkaczyk/revisionable)
-* [rap2hpoutre/laravel-log-viewer](https://github.com/rap2hpoutre/laravel-log-viewer)
 * [jenssegers/agent](https://github.com/jenssegers/agent)
 
+* [rap2hpoutre/laravel-log-viewer --dev](https://github.com/rap2hpoutre/laravel-log-viewer)
 * [barryvdh/laravel-ide-helper --dev](https://github.com/barryvdh/laravel-ide-helper)
 * [barryvdh/laravel-debugbar --dev](https://github.com/barryvdh/laravel-debugbar)
 
@@ -33,7 +33,7 @@ Set minimum stability and prefer-stable options on your `composer.json` file.
 Install package and dev-dependencies via composer
 
 ```
-composer require barryvdh/laravel-ide-helper barryvdh/laravel-debugbar --dev
+composer require barryvdh/laravel-ide-helper barryvdh/laravel-debugbar rap2hpoutre/laravel-log-viewer --dev
 
 composer require shibby/loilerplate
 
