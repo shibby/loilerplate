@@ -35,7 +35,7 @@ class BaseController extends Controller
     {
         $this->parameters['siteTitle'] = $title.' | '.$this->parameters['siteTitle'];
     }
-    
+
     protected function addSiteTitle($title)
     {
         $this->parameters['siteTitle'] = $title.' | '.$this->parameters['siteTitle'];
