@@ -35,7 +35,6 @@ class LoilerplateServiceProvider extends ServiceProvider
         $this->app->register(\Jenssegers\Agent\AgentServiceProvider::class);
         $this->app->register(\Kris\LaravelFormBuilder\FormBuilderServiceProvider::class);
         if ($this->app->environment() !== 'production') {
-            $this->app->register(\Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class); //todo: share routes and password config
             $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         }
