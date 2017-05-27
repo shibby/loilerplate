@@ -3,6 +3,7 @@
     "description": "My boilerplate for Laravel projects. Yes, i ALMOST use these packages on every project.",
     "type": "library",
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "license": "GPL",
     "authors": [
         {
@@ -13,13 +14,13 @@
     "require": {
         "php": ">=7.0",
         "kris/laravel-form-builder": "^1.7",
-        "laravelcollective/html": "5.3.*|5.4.*",
+        "laravelcollective/html": "^5.4",
         "doctrine/dbal": "^2.5",
         "jenssegers/agent": "^2.3",
-        "sofa/revisionable": "^5.3"
+        "sofa/revisionable": "^5.4",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
-        "rap2hpoutre/laravel-log-viewer": "^0.6.0",
         "barryvdh/laravel-ide-helper": "^2.2",
         "barryvdh/laravel-debugbar": "^2.2"
     },
