@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
+use Shibby\Loilerplate\Helper\Breadcrumb;
 use Shibby\Loilerplate\Helper\FlashMessage;
 use Yajra\Datatables\Services\DataTable;
 
@@ -72,6 +73,16 @@ class BaseController extends Controller
         $this->parameters['flashMessages'][] = $message;
     }
 
+    protected function addBreadcrumb($url, $text, $icon = '')
+    {
+        $bc = new Breadcrumb();
+        $bc->setUrl($url)
+            ->setText($text)
+            ->setIcon($icon);
+
+        $this->parameters['breadcrumbs'][] = $bc;
+    }
+
     protected function initializeViewParameters()
     {
         $message = \Session::get('flashMessages');
@@ -79,6 +90,8 @@ class BaseController extends Controller
         if ($message) {
             $this->parameters['flashMessages'][] = $message;
         }
+
+        $this->parameters['breadcrumbs'] = collect($this->parameters['breadcrumbs'] ?? []);
     }
 
     protected function renderDatatable(DataTable $datatable, string $view, $parameters = [])
