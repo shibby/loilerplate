@@ -11,6 +11,8 @@ It contains and registers these packages by default:
 * [kris/laravel-form-builder](https://github.com/kristijanhusak/laravel-form-builder)
 * [laravelcollective/html](https://github.com/LaravelCollective/html)
 * [doctrine/dbal](https://github.com/doctrine/dbal)
+* [guzzlehttp/guzzle](https://github.com/guzzlehttp/guzzle)
+* [predis/predis](https://github.com/predis/predis)
 * [sofa/revisionable](https://github.com/jarektkaczyk/revisionable)
 * [jenssegers/agent](https://github.com/jenssegers/agent)
 
