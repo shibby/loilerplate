@@ -73,8 +73,12 @@ class BaseController extends Controller
         $this->parameters['flashMessages'][] = $message;
     }
 
-    protected function addBreadcrumb($url, $text, $icon = '')
+    protected function addBreadcrumb($url, $text = '', $icon = '')
     {
+        if (!$text) {
+            $text = $url;
+            $url = '';
+        }
         $bc = new Breadcrumb();
         $bc->setUrl($url)
             ->setText($text)
